@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--配置 User 对象创建-->
+    <bean id="user" class="beans.User" name="user_name"/>
+    <bean id="book" class="beans.Book">
+        <property name="b_name" value="世纪"/>
+        <property name="b_author" value="达摩老祖"/>
+    </bean>
+    <bean id="orders" class="beans.Order">
+        <!-- 提供有参，并且不提供无参的话 必须配置 constructor-arg index是代表有参的位置，一般用name就行 -->
+        <constructor-arg name="o_name" value="电脑"/>
+        <!--属性值包含特殊符号
+             1 把<>进行转义 &lt; &gt;
+             2 把带特殊符号内容写到 CDATA
+             设空值的话 直接在标签之间 加 <null/>
+            -->
+        <constructor-arg index="1" name="o_address" >
+            <value><![CDATA[<<南京>>]]></value>
+        </constructor-arg>
+    </bean>
+</beans>

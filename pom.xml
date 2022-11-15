@@ -3,10 +3,14 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.maven</groupId>
   <artifactId>Spring-start</artifactId>
-  <packaging>war</packaging>
+  <packaging>pom</packaging>
+  <modules>
+    <module>demo1</module>
+  </modules>
   <version>1.0-SNAPSHOT</version>
   <name>Spring-start Maven Webapp</name>
-  <url>http://maven.apache.org</url>
+<!--  <url>http://maven.apache.org</url>-->
+  <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
