@@ -1,6 +1,6 @@
-package Service;
+package com.codeking.Service;
 
-import Dao.UserDao;
+import com.codeking.Dao.UserDao;
 
 /**
  * @author : codeking

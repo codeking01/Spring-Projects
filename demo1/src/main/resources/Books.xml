@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--        （1）在 spring 配置文件中引入名称空间 util-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+    <!--1 提取 list 集合类型属性注入-->
+    <util:list id="bookList">
+        <value>易筋经</value>
+        <value>九阴真经</value>
+        <value>九阳神功</value>
+    </util:list>
+    <!--2 提取 list 集合类型属性注入使用-->
+    <!--    scope 属性值
+    第一个值 默认值，singleton，表示是单实例对象
+    第二个值 prototype，表示是多实例对象-->
+    <bean id="book" class="com.codeking.beans.Books" scope="prototype">
+        <property name="list" ref="bookList"/>
+    </bean>
+
+</beans>

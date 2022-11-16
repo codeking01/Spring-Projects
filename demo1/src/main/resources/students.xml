@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="stu" class="com.codeking.beans.Students">
+        <property name="courses">
+            <array>
+                <value>数据库</value>
+                <value>C++</value>
+            </array>
+        </property>
+        <property name="list">
+            <list>
+                <value>列表一</value>
+                <value>列表二</value>
+            </list>
+        </property>
+        <property name="maps">
+            <map>
+                <entry key="JAVA" value="java"/>
+                <entry key="C++" value="C"/>
+            </map>
+        </property>
+        <property name="sets">
+            <set>
+                <value>Mysql</value>
+                <value>redis</value>
+            </set>
+        </property>
+        <!--创建多个 bookList 对象-->
+        <property name="bookList">
+            <list>
+                <ref bean="book1"/>
+                <ref bean="book2"/>
+            </list>
+        </property>
+    </bean>
+    <bean id="book1" class="com.codeking.beans.bookList">
+        <property name="b_name" value="武林秘籍"/>
+    </bean>
+    <bean id="book2" class="com.codeking.beans.bookList">
+        <property name="b_name" value="葵花宝典"/>
+    </bean>
+</beans>

@@ -1,4 +1,4 @@
-package beans;
+package com.codeking.beans;
 
 /**
  * @author : codeking

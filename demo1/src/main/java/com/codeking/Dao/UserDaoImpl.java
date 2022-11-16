@@ -1,4 +1,4 @@
-package Dao;
+package com.codeking.Dao;
 
 /**
  * @author : codeking

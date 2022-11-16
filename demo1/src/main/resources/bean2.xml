@@ -4,12 +4,12 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-    <bean id="userService" class="Service.UserService">
+    <bean id="userService" class="com.codeking.Service.UserService">
         <!--注入 userDao 对象
          name 属性：类里面属性名称
          ref 属性：创建 userDao 对象 bean 标签 id 值
          -->
         <property name="userDao" ref="userDaoImpl"/>
     </bean>
-    <bean id="userDaoImpl" class="Dao.UserDaoImpl"/>
+    <bean id="userDaoImpl" class="com.codeking.Dao.UserDaoImpl"/>
 </beans>

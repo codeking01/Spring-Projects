@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="emp" class="com.codeking.beans.Employee">
+        <!--设置两个普通属性-->
+        <property name="e_name" value="张三"/>
+        <property name="gender" value="男"/>
+        <property name="department" ref="dept"/>
+        <property name="department.d_name" value="修改运维部"/>
+    </bean>
+    <bean id="dept" class="com.codeking.beans.Department">
+        <property name="d_id" value="1"/>
+        <property name="d_name" value="开发部门"/>
+    </bean>
+</beans>
