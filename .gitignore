@@ -35,3 +35,5 @@ build/
 
 /src/test/
 /demo1/src/test/
+/Spring-AOP/src/test/
+*/test/
