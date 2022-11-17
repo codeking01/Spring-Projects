@@ -5,9 +5,9 @@ package com.codeking.Entity;
  * @date : 2022/11/17 20:33
  */
 public class Book {
-    public String BookId;
-    public String BookName;
-    public String BookStatus;
+    private String BookId;
+    private String BookName;
+    private String BookStatus;
 
     public String getUserId() {
         return BookId;
