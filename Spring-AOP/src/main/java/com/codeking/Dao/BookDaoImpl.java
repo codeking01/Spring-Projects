@@ -20,7 +20,7 @@ public class BookDaoImpl implements BookDao {
         //1 创建 sql 语句
         String sql = "insert into `book` values(?,?,?)";
         //2 调用方法实现
-        Object[] args = {"1", "张三","良好"};
+        Object[] args = {"4", "李四","良好"};
         int update = jdbcTemplate.update(sql, args);
         System.out.println(update);
     }
