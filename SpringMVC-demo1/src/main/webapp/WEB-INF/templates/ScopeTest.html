@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>scopeTest</title>
+</head>
+<body>
+<a th:href="@{/scopeHttpServletRequest}">使用ServletAPI向request域对象共享数据,scopeHttpServletRequest</a><br>
+<a th:href="@{/scopeModelAndView}">使用ModelAndView向request域对象共享数据,scopeModelAndView</a><br>
+<a th:href="@{/scopeModel}">使用Model向request域对象共享数据,scopeModel</a><br>
+<a th:href="@{/scopeMap}">使用Map向request域对象共享数据,scopeMap</a><br>
+<a th:href="@{/scopeSession}">使用HttpSession 向session域对象共享数据,scopeApplication</a><br>
+<a th:href="@{/scopeApplication}">使用HttpSession获取ServletContext,向application域对象共享数据,scopeApplication</a><br>
+</body>
+</html>

@@ -28,4 +28,9 @@ public class HelloController {
         //设置视图名称
         return "hello";
     }
+    @RequestMapping(value ="/ScopeTest")
+    public String ScopeTest() {
+        //设置视图名称
+        return "ScopeTest";
+    }
 }
