@@ -5,7 +5,25 @@
     <title>首页</title>
 </head>
 <body>
-    <h1>首页</h1>
-    <a th:href="@{/hello}">HelloWorld</a><br/>
+<h1>首页</h1>
+<a th:href="@{/hello}">HelloWorld</a><br/>
+<a th:href="@{/params/paramsTest(name=jack)}">paramsTest</a><br/>
+<a th:href="@{/params/paramsTest2}">paramsTest2</a><br/>
+
+<a th:href="@{/getParams(name='jack',password=123456)}">getParams的参数获取 httpServletRequest获取</a><br/>
+<a th:href="@{/getParams2(name='bob',password=55552565)}">getParams的参数获取 spring获取</a><br/>
+<a th:href="@{/getParams3(my_name='lucy',password=55552565)}">getParams的参数获取 测试RequestParam的用法</a><br/>
+<a th:href="@{/getParams3(password=55552565)}">getParams的参数获取 测试RequestParam的用法,不写某个字段</a><br/>
+<a th:href="@{/getParams4}">getParams的参数获取 测试RequestHeader的用法</a><br/>
+
+<h2>测试表单</h2>
+<form th:action="@{/getparamPOJO}" method="get">
+    用户名：<input type="text" name="user_name"><br>
+    密码：<input type="password" name="password"><br>
+    爱好：<input type="checkbox" name="hobby" value="a">a
+    <input type="checkbox" name="hobby" value="b">b
+    <input type="checkbox" name="hobby" value="c">c
+    <button type="submit">提交</button>
+</form>
 </body>
 </html>
