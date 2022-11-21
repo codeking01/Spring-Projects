@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>首页</title>
+    <script type="text/javascript" th:src="@{/static/js/vue.js}"></script>
+    <script type="text/javascript" th:src="@{/static/js/axios.min.js}"></script>
 </head>
 <body>
 <h1>首页</h1>
@@ -29,5 +31,40 @@
     <input type="checkbox" name="hobby" value="c">c
     <button type="submit">提交</button>
 </form>
+<hr>
+<form th:action="@{/testRequestBody}" method="post">
+    用户名：<input type="text" name="username"><br>
+    密码：<input type="password" name="password"><br>
+    <input type="submit">
+</form>
+<br>
+<a th:href="@{/testRequestEntity}">/testRequestEntity</a><br/>
+<a th:href="@{/testResponseBody}">/testResponseBody</a><br/>
+<a th:href="@{/testResponseEntity}">/testResponseEntity</a><br/>
+<hr>
+<div id="app">
+    <a th:href="@{/testAjax}" @click="testAjax">testAjax</a><br>
+    <a th:href="@{/testAjax2}" @click="testAjax">testAjax2</a><br>
+</div>
+<script type="text/javascript">
+    var vue = new Vue({
+        el:"#app",
+        methods:{
+            testAjax:function (event) {
+                axios({
+                    method:"post",
+                    url:event.target.href,
+                    params:{
+                        username:"admin",
+                        password:"123456"
+                    }
+                }).then(function (response) {
+                    alert(response.data);
+                });
+                event.preventDefault();
+            }
+        }
+    });
+</script>
 </body>
 </html>
