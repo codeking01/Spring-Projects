@@ -28,7 +28,7 @@
             </bean>
         </property>
     </bean>
-    <mvc:view-controller path="/testView" status-code="200" view-name="success"/>
+    <mvc:view-controller path="/testView" status-code="200" view-name="redirect:success"/>
     <!--
     处理静态资源，例如html、js、css、jpg
     若只设置该标签，则只能访问静态资源，其他请求则无法访问
