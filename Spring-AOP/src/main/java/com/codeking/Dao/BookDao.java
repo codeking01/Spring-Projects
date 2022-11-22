@@ -1,6 +1,7 @@
 package com.codeking.Dao;
 
 import com.codeking.Entity.Book;
+import org.springframework.context.annotation.Bean;
 
 /**
  * @author : codeking

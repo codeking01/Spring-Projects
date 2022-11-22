@@ -46,17 +46,26 @@
     <a th:href="@{/testAjax}" @click="testAjax">testAjax</a><br>
     <a th:href="@{/testAjax2}" @click="testAjax">testAjax2</a><br>
 </div>
+<hr>
+<div id="download">
+    <a th:href="@{/testDownload}" @click="testDownload">testDownload 下载</a><br>
+    <form th:action="@{/testUpload}" method="post" enctype="multipart/form-data">
+        <input type="file" name="uploadFile">
+        <button type="submit" value="上传">提交</button>
+    </form>
+</div>
+
 <script type="text/javascript">
     var vue = new Vue({
-        el:"#app",
-        methods:{
-            testAjax:function (event) {
+        el: "#app",
+        methods: {
+            testAjax: function (event) {
                 axios({
-                    method:"post",
-                    url:event.target.href,
-                    params:{
-                        username:"admin",
-                        password:"123456"
+                    method: "post",
+                    url: event.target.href,
+                    params: {
+                        username: "admin",
+                        password: "123456"
                     }
                 }).then(function (response) {
                     alert(response.data);
