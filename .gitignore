@@ -33,8 +33,8 @@ build/
 .vscode/
 /pro03-springboot2-ssmp/src/test/
 
-/src/test/
 /demo1/src/test/
 /Spring-AOP/src/test/
 */test/
 **/target/
+**/test/

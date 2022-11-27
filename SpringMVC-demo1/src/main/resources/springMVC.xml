@@ -27,6 +27,7 @@
             </bean>
         </property>
     </bean>
+    <mvc:annotation-driven/>
     <mvc:view-controller path="/testView" status-code="200" view-name="redirect:success"/>
     <!--
     处理静态资源，例如html、js、css、jpg

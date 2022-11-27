@@ -5,26 +5,18 @@ import com.codeking.Interceptor.FirstInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.context.ContextLoader;
-import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.multipart.MultipartResolver;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.HandlerExceptionResolver;
-import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.*;
 import org.springframework.web.servlet.handler.SimpleMappingExceptionResolver;
-import org.thymeleaf.spring5.SpringTemplateEngine;
-import org.thymeleaf.spring5.view.ThymeleafViewResolver;
-import org.thymeleaf.templatemode.TemplateMode;
-import org.thymeleaf.templateresolver.ITemplateResolver;
-import org.thymeleaf.templateresolver.ServletContextTemplateResolver;
 
 import java.util.List;
 import java.util.Properties;
 
 /**
  * @author : codeking
- * @date : 2022/11/22 22:33
+ * @Create : 2022/11/22 22:33
  */
 
 /**
@@ -54,7 +46,7 @@ public class WebConfig implements WebMvcConfigurer {
     //3、view-controller
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/hello").setViewName("hello");
+        registry.addViewController("/hello11").setViewName("hello");
     }
 
     //6、文件上传解析器

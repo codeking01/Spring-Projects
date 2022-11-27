@@ -19,6 +19,4 @@ public class BookService {
     public void addBook(Book book) {
         bookDao.bookAdd(book);
     }
-
-
 }

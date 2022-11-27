@@ -8,6 +8,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * The type Employee dao.
+ *
  * @author : codeking
  * @date : 2022/11/21 13:35
  */
@@ -27,6 +29,11 @@ public class EmployeeDao {
 
     private static Integer initId = 1006;
 
+    /**
+     * Save.
+     *
+     * @param employee the employee
+     */
     public void save(Employee employee) {
         if (employee.getId() == null) { //添加
             employee.setId(initId++);
@@ -35,12 +42,23 @@ public class EmployeeDao {
         employees.put(employee.getId(), employee);
     }
 
-    // 查询数据
+    /**
+     * Gets all.
+     *
+     * @return the all
+     */
+// 查询数据
     public Collection<Employee> getAll() {
         return employees.values();
     }
 
-    // 根据id查询
+    /**
+     * Get employee.
+     *
+     * @param id the id
+     * @return the employee
+     */
+// 根据id查询
     public Employee get(Integer id) {
         // 根据id查到字典对应的value
         return employees.get(id);

@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * @author : codeking
- * @date : 2022/11/18 21:00
+ * @Create : 2022/11/18 21:00
  */
 
 @Configuration
